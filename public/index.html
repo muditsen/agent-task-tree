@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agent Task Tree</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob shape-1"></div>
+        <div class="blob shape-2"></div>
+    </div>
+    
+    <div class="container">
+        <header>
+            <h1>AI App & Website Builder</h1>
+            <p>Describe the software or website you want to build and watch the AI plan and construct it step-by-step.</p>
+        </header>
+
+        <section class="task-input-section">
+            <textarea id="task-input" placeholder="e.g. Build a sleek, responsive portfolio website featuring a dark-mode theme..."></textarea>
+            <button id="execute-btn">Build Application</button>
+        </section>
+
+        <section class="execution-panel">
+            <div class="panel-header" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                <h2>Execution Log</h2>
+                <div style="display: flex; gap: 1rem; align-items: center;">
+                    <a id="download-code-btn" class="hidden" style="background-color: var(--success-color); color: white; padding: 0.5rem 1rem; border-radius: 8px; text-decoration: none; font-size: 0.85rem; font-weight: 600;" download>Download Code</a>
+                    <div id="status-indicator" class="status idle">Idle</div>
+                </div>
+            </div>
+            <div class="log-container" id="log-container">
+                <!-- Logs will be populated here by JS -->
+            </div>
+            <div class="feedback-container hidden" id="feedback-container">
+                <input type="text" id="feedback-input" placeholder="Type 'Approved' or request changes...">
+                <button id="continue-btn">Approve & Continue</button>
+            </div>
+        </section>
+
+        <section class="tree-panel hidden" id="tree-panel">
+            <div class="panel-header">
+                <h2>Project Task Tree</h2>
+                <button id="download-tree-btn" class="hidden">Download as Image</button>
+            </div>
+            <div id="tree-container" class="tree-container">
+                <!-- Dynamic tree renders here -->
+            </div>
+        </section>
+    </div>
+
+    <!-- Html2Canvas library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
