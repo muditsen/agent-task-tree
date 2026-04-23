@@ -10,9 +10,10 @@ By forcing the AI to strictly construct a deterministic **Task Tree** using dedi
 
 ## Setup Instructions
 
-1. **Clone or Navigate to the Repository**
-   Make sure you are in the root directory of the project.
+1. **Clone the Repository**
+   Clone the repository from GitHub and navigate into the root directory:
    ```bash
+   git clone https://github.com/muditsen/agent-task-tree.git
    cd agent-task-tree
    ```
 
